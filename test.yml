@@ -1,0 +1,6 @@
+- hosts: host
+  tasks:
+  - name: Install Httpd service
+    yum: name=httpd state=present
+  - name: Start httpd service and enable it on restart
+    service: name=httpd state=started enabled=yes
