@@ -1,0 +1,6 @@
+- hosts: hosts
+  tasks:
+  - name: Print hostname using ansible facts.
+    debug:
+     msg: >
+            The hostname of managed host is "{{ ansible_hostname }}"

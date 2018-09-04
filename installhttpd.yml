@@ -1,0 +1,6 @@
+- hosts: hosts
+  tasks:
+  - name: Install httpd and register output.
+    yum: name={{ package }} state=present
+    register: install_result
+  - debug: var=install_result

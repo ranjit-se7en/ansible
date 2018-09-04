@@ -1,0 +1,11 @@
+- hosts: hosts
+  tasks:
+  - name: copy content to httpd folder
+    copy: content="This is a html web page" dest=/var/www/html/index.html
+
+  - name: Start httpd service and make sure its running
+    service: name=httpd state=started enabled=yes
+
+  - name: check httpd service is reachable
+    uri: url=http://54.87.129.52/index.html
+    status_code: 200

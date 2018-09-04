@@ -1,0 +1,6 @@
+- hosts: hosts
+  tasks:
+  - name: This task Creates a directory
+    file: state=directory recurse=yes path=/var/www/html/modulee/test owner=root group=root mode=0744
+  - name: Copy files to created directory
+    copy: src=/root/Git/ansible/test.yml dest=/var/www/html/modulee/test

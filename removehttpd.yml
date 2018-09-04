@@ -1,0 +1,4 @@
+- hosts: hosts
+  tasks:
+  - name: remove httpd package
+    yum: name={{ package }} state=absent

@@ -1,0 +1,4 @@
+- hosts: hosts
+  tasks:
+  - name: copy content into /etc/hosts
+    copy: dest=/etc/hosts content="hostname 192.168.0.1\n"
