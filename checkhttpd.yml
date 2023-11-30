@@ -7,5 +7,5 @@
     service: name=httpd state=started enabled=yes
 
   - name: check httpd service is reachable
-    uri: url=http://54.87.129.52/index.html
+    uri: url=http://192.168.0.1/index.html
     status_code: 200
